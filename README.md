@@ -20,8 +20,7 @@ Design a language for describing flipbooks and implement a compiler for this lan
 
 where start and end are the keywords pointing to the executable portion of the code, num1 and num2 are the starting and ending frame (num1 <= num2) and image is the path to an image (.png, .jpg, .jpeg), saved in a file with a `.flip` extension
 - The compiler scans and parses the code and if it is valid, creates a gif out of the given frames. If any frames are empty, a blank black image is set as placeholder.
+- can combine 2 images and display as 1
 
 ### To be added
-- Image resize (need to restructure with opencv)
-- `combine` keyword to take multiple images as input and display them according the user-given matrix (ref. matplotlib plots)
-- More error checking
+- demo.mp4 doesnt have sound for some reason? but there's an actual demo in the last minute of the video
