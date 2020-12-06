@@ -3,6 +3,7 @@ from scanner import scanner
 from parser import parser
 
 import imageio
+from PIL import Image
 import numpy as np
 
 
@@ -31,12 +32,14 @@ class FlipBook :
         """ add other params/functions to do resizing/positioning etc """       
         for i in range(startFrame-1, endFrame-1):
             try:
-                image = imageio.imread(imageName)
+                # image = imageio.imread(imageName)
+                im = Image.open(imageName)
+                im = im.resize((720, 720))
             except:
                 print (imageName, " not found.")
                 # BufferedImage bi= new BufferedImage(320,240,BufferedImage.TYPE_BYTE_GRAY);
-                image=self.blank
-            self.frame_list.append(image)
+                im=self.blank
+            self.frame_list.append(im)
 
 
     def parse_input(self, text):
