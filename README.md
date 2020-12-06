@@ -23,4 +23,4 @@ where start and end are the keywords pointing to the executable portion of the c
 - can combine 2 images and display as 1
 
 ### To be added
-- demo.mp4 doesnt have sound for some reason? but there's an actual demo in the last minute of the video
+- Fix the combine and extend its functionality
