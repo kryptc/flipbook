@@ -1,6 +1,10 @@
 # flipbook
 Design a language for describing flipbooks and implement a compiler for this language that can convert a flipbook description into a print able pdf (or a video).
 
+### To Run
+1. `pip install -r requirements.txt`
+2. `python3 main.py test.flip`
+
 ### What's added as of now:
 - Given a code of the format:
 

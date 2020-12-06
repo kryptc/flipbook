@@ -21,7 +21,7 @@ class FlipBook :
         for frame in frames:
             startFrame = frame[0]
             endFrame = frame[1]
-            print (frame, len(frame))
+            # print (frame, len(frame))
             if len(frame) == 3: # standard appending
                 imageName = frame[2]
             else:
@@ -81,6 +81,9 @@ def main(argv):
 
     #read input file contents
     ipfile = argv[1]
+    if ipfile.endswith(".flip") is False:
+        print ("Input a .flip file")
+        exit()
     file_obj = open(ipfile,"r")
     if file_obj.mode=="r":
         text = file_obj.read()
