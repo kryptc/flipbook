@@ -35,10 +35,13 @@ class FlipBook :
                 # image = imageio.imread(imageName)
                 im = Image.open(imageName)
                 im = im.resize((720, 720))
+                self.frame_list.append(im)
+                self.frame_list.append(im)
+                
             except:
                 print (imageName, " not found.")
                 # BufferedImage bi= new BufferedImage(320,240,BufferedImage.TYPE_BYTE_GRAY);
-                im=self.blank
+            im=self.blank
             self.frame_list.append(im)
 
 
