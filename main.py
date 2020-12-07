@@ -51,26 +51,26 @@ class FlipBook :
                 im = Image.open(imageName)
                 im = im.resize((720, 720))
                 self.frame_list.append(im)
-                self.frame_list.append(im)
+                # self.frame_list.append(im)
 
             except:
                 print (imageName, " not found.")
                 # BufferedImage bi= new BufferedImage(320,240,BufferedImage.TYPE_BYTE_GRAY);
-            im=self.blank
-            self.frame_list.append(im)
+                im=self.blank
+                self.frame_list.append(im)
 
 
-    def parse_input(self, text):
-        code, frames = parser(text)
+    def parse_input(self, text, markers):
+        code, frames = parser(text, markers)
         if code:
             self.generate_gif(frames)
         else:
             exit()
 
     def scan_input(self, text):
-        if scanner(text):
-            self.parse_input(text)
-            # print ("yeehaw")
+        code, markers = scanner(text)
+        if code:
+            self.parse_input(text, markers)
         else:
             exit()
 

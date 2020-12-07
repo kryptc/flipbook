@@ -1,7 +1,7 @@
 extensions=('.jpg','.jpeg','.png')
 
-def parser(text):
-	text = text.split('\n')
+def parser(text, markers):
+	text = text.split('\n')[markers[0]:markers[1]+1]
 	if text[0] != "start":
 		print ("Syntax error: Code must start with keyword 'start'")
 		return [0,0]
